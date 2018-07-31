@@ -1,0 +1,93 @@
+doctype html
+html
+    head
+        title Рассылка новых объявлений
+        meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+        style(type="text/css").
+            td {
+                padding: 1px;
+            }
+
+            #body_table {
+                border-collapse: collapse;
+                border: #cccccc 1px solid;
+                background-color: whitesmoke;
+                margin: 10px
+            }
+
+    body
+        center
+            h4 Добрый день!
+
+            p.
+                Предоставляем Вам список торгов по интересующим Вас позициям.
+                В рассылке имеется возможность автоматический сформировать Заявку на участие с заполненными данными,
+                для последующей отсылки их брокерам. Для формирования этих документов Вам необходимо всего лишь кликнуть по соответствующей ссылке.
+            br
+            br
+            table(id="body_table", cellpadding="0", cellspacing="0", width="800", align="left")
+                tr
+                    th(width="100px")
+                    th
+                for purchase, i in purchases
+                    if i > 0
+                        tr
+                            td(colspan="2")
+                                hr
+                    tr
+                        td
+                            b ОБЪЯВЛЕНИЕ:
+                        td #{purchase.number}
+                    tr
+                        td Наименование объявления:
+                        td #{purchase.ruName}
+                    unless !purchase.source
+                        tr
+                            td Источник:
+                            td #{purchase.source}
+                    tr
+                        td Организатор:
+                        td #{purchase.customer}
+                    unless !purchase.method
+                        tr
+                            td Метод:
+                            td #{purchase.method}
+                    tr
+                        td Дата начала:
+                        td #{purchase.startDay}
+                    tr
+                        td Дата окончания:
+                        td #{purchase.endDay}
+                    for lot in purchase.lots
+                        tr
+                            td(colspan="2")
+                                hr
+                        tr
+                            td(colspan="2")
+                                b ЛОТ
+                        tr
+                            td Наименование лота:
+                            td #{lot.ruName}
+                        tr
+                            td Описание:
+                            td #{lot.ruDescription}
+                        unless !lot.link
+                            tr
+                                td Ссылка:
+                                td #{lot.link}
+                        tr
+                            td Место поставки:
+                            td #{lot.deliveryPlace}
+                        tr
+                            td Количество:
+                            td #{lot.quantity}
+                        tr
+                            td Цена:
+                            td #{lot.price}
+                        tr
+                            td Сумма:
+                            td #{lot.sum}
+                        if purchase.isource == 4
+                            tr
+                                td(colspan="2")
+                                    a(href="http://altatender.kz/rest/api/broker/donwload/order/#{envelope.id}/#{purchase.number}") Скачать заявку

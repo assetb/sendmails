@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../altatender/AltaTender.iml" filepath="$PROJECT_DIR$/../altatender/AltaTender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sumparser/SummParser.iml" filepath="$PROJECT_DIR$/../sumparser/SummParser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../altaikbo/altaikBO.iml" filepath="$PROJECT_DIR$/../altaikbo/altaikBO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../altaikbp/altaikBP.iml" filepath="$PROJECT_DIR$/../altaikbp/altaikBP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../altaikdb/altaikDB.iml" filepath="$PROJECT_DIR$/../altaikdb/altaikDB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../parser/dailyparser.iml" filepath="$PROJECT_DIR$/../parser/dailyparser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sendmails.iml" filepath="$PROJECT_DIR$/sendmails.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../utils/utils.iml" filepath="$PROJECT_DIR$/../utils/utils.iml" />
+    </modules>
+  </component>
+</project>

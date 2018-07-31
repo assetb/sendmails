@@ -1,0 +1,96 @@
+doctype html
+html
+    head
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    style(type="text/css").
+        td {
+            padding: 1px;
+        }
+
+        #body_table {
+            border-collapse: collapse;
+            border: #cccccc 1px solid;
+            background-color: whitesmoke;
+            margin: 10px
+        }
+    body
+        center
+            h3
+                b #{count} новых объявлений по автопоиску
+            br
+            br
+            table(id="body_table", cellpadding="0", cellspacing="0", width="800", align="left")
+                tr
+                    th(width="100px")
+                    th
+                for delivery, i in deliveries
+                    if i > 30
+                        break
+
+                    if i > 0
+                        tr
+                            td(colspan="2")
+                                hr
+                    tr
+                        td
+                            b ОБЪЯВЛЕНИЕ:
+                        td #{delivery.ProcessedPurchase.number}
+                    tr
+                        td Наименование объявления:
+                        td
+                            #{delivery.ProcessedPurchase.ruName}
+                            //+selectedText(delivery.ProcessedPurchase.ruName, delivery.keyword)
+                    unless !delivery.ProcessedPurchase.source
+                        tr
+                            td Источник:
+                            td
+                                if delivery.ProcessedPurchase.source.link != null
+                                    a(href="#{delivery.ProcessedPurchase.source.link}") #{delivery.ProcessedPurchase.source.name}
+                                else
+                                    #{delivery.ProcessedPurchase.source.name}
+                    tr
+                        td Организатор:
+                        td #{delivery.ProcessedPurchase.customer}
+                    unless !delivery.ProcessedPurchase.method
+                        tr
+                            td Метод:
+                            td #{delivery.ProcessedPurchase.method.name}
+                    tr
+                        td Дата начала:
+                        td #{delivery.ProcessedPurchase.startDay}
+                    tr
+                        td Дата окончания:
+                        td #{delivery.ProcessedPurchase.endDay}
+                    for lot in delivery.ProcessedPurchase.lots
+                        tr
+                            td(colspan="2")
+                                hr
+                        tr
+                            td(colspan="2")
+                                b ЛОТ
+                        tr
+                            td Наименование лота:
+                            td
+                                #{lot.ruName}
+                                //+selectedText(lot.ruName, delivery.keyword)
+                        tr
+                            td Описание:
+                            td
+                                #{lot.ruDescription}
+                                //+selectedText(lot.ruDescription, delivery.keyword)
+                        unless !lot.link
+                            tr
+                                td Ссылка:
+                                td #{lot.link}
+                        tr
+                            td Место поставки:
+                            td #{lot.deliveryPlace}
+                        tr
+                            td Количество:
+                            td #{lot.quantity}
+                        tr
+                            td Цена:
+                            td #{lot.price}
+                        tr
+                            td Сумма:
+                            td #{lot.sum}

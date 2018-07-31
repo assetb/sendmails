@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file url="file://$PROJECT_DIR$/../parser/src/main/resources" />
+    <file url="file://$PROJECT_DIR$/../sumparser/src/main/resources" />
+    <file type="web" url="file://$PROJECT_DIR$/../altatender" />
+  </component>
+  <component name="MavenCompilerTasksManager">
+    <option name="afterCompileTasks">
+      <set>
+        <MavenCompilerTask>
+          <option name="goal" value="install" />
+          <option name="projectPath" value="$PROJECT_DIR$/pom.xml" />
+        </MavenCompilerTask>
+      </set>
+    </option>
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../altaikbo/pom.xml" />
+        <option value="$PROJECT_DIR$/../altaikbp/pom.xml" />
+        <option value="$PROJECT_DIR$/../altaikdb/pom.xml" />
+        <option value="$PROJECT_DIR$/../altatender/pom.xml" />
+        <option value="$PROJECT_DIR$/../parser/pom.xml" />
+        <option value="$PROJECT_DIR$/../sumparser/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../utils/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

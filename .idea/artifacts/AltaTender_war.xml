@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="AltaTender:war">
+    <output-path>$PROJECT_DIR$/../altatender/target</output-path>
+    <root id="archive" name="AltaTender-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="AltaTender:war exploded" />
+    </root>
+  </artifact>
+</component>

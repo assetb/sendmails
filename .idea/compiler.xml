@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="altaikBO" />
+        <module name="altaikBP" />
+        <module name="altaikDB" />
+        <module name="AltaTender" />
+        <module name="dailyparser" />
+        <module name="sendmails" />
+        <module name="SummParser" />
+        <module name="utils" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="altaikBO" target="1.8" />
+      <module name="altaikBP" target="1.8" />
+      <module name="altaikDB" target="1.8" />
+      <module name="AltaTender" target="1.8" />
+      <module name="dailyparser" target="1.8" />
+      <module name="sendmails" target="1.8" />
+      <module name="SummParser" target="1.8" />
+      <module name="utils" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

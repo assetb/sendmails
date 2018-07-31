@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Отчет от </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table th {
+                border: 1px solid darkgray;
+            }
+            table td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div>Дата формирования <b id="createDate"></b></div>
+    <center>
+        <div style="width: 800px;">
+            <div>
+                <h3>Отчет о работе модуля рассылки(ЕТС)</h3>
+                <div style="text-align: left;">
+                    <p></p>
+                    <p>Краткая информаци о работе модуля.</p>
+                    <ul>
+                        <li>Отправлено соощбений: <b id="countMessage"></b></li>
+                    </ul>
+                    </br>
+                    <table id="envelopes">
+                        <thead>
+                            <tr>
+                                <th>Наименование компании</th>
+                                <th>email</th>
+                                <th>Список отпраленных объявлений</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

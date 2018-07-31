@@ -1,0 +1,47 @@
+doctype html
+html
+    head
+        title Отчет от #{createDate}
+        meta(http-equiv="Content-Type" content="text/html" charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        style.
+            table th {
+                border: 1px solid darkgray;
+            }
+            table td {
+                border: 1px solid black;
+            }
+            .purchaseNumber {
+                margin: 0 10px;
+            }
+
+    body
+        div Дата формирования #{createDate}
+        center
+            div(style="width: 800px;")
+                div
+                    h3 Отчет о работе модуля рассылки(ЕТС)
+            div(style="text-align: left;")
+                p
+                p Краткая информаци о работе модуля.
+                ul
+                    li Отправлено соощбений: #{countMessage}
+                br
+                table
+                    tr
+                        th Электронный адрес
+                        th Описание
+                        th Список отпраленных объявлений
+                        th Состояние
+                    for envelope in envelopes
+                        tr
+                            td #{envelope.getEmail()}
+                            td #{envelope.getDescription()}
+                            td
+                                each purchase in envelope.getPurchases()
+                                    | #{purchase.number}&ensp;
+                            td
+                                if envelope.isSended()
+                                    | Отправлено
+                                else
+                                    | Не отправлено
